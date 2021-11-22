@@ -3,9 +3,9 @@ import numpy as np
 import torch.nn.functional as F
 from torch import optim
 from torch import nn
-from models.flow import get_point_cnf
-from models.flow import get_latent_cnf
-from utils import truncated_normal, reduce_tensor, standard_normal_logprob
+from models.Pointflow.models.flow import get_point_cnf
+from models.Pointflow.models.flow import get_latent_cnf
+from models.Pointflow.utils import truncated_normal, reduce_tensor, standard_normal_logprob
 
 
 class Encoder(nn.Module):
@@ -215,10 +215,10 @@ class PointFlow(nn.Module):
         # Sample points conditioned on the shape code
         y = self.sample_gaussian((batch_size, num_points, self.input_dim), truncate_std, gpu=gpu)
         x = self.point_cnf(y, z, reverse=True).view(*y.size())
-        return z, x
+        return w, z, y, x
 
     def reconstruct(self, x, num_points=None, truncate_std=None):
         num_points = x.size(1) if num_points is None else num_points
         z = self.encode(x)
         _, x = self.decode(z, num_points, truncate_std)
-        return x
+        return z, x

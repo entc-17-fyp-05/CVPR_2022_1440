@@ -2,22 +2,22 @@ import numpy as np
 import torch
 import argparse
 # import matplotlib.pyplot as plt
-from utils.dataset import *
-from utils.misc import *
-from utils.data import *
-from models.autoencoder import *
+from models.Diffusion.utils.dataset import *
+from models.Diffusion.utils.misc import *
+from models.Diffusion.utils.data import *
+from models.Diffusion.models.autoencoder import *
 # from evaluation import EMD_CD
 # from latent_space import *
 # from models.autoencoder import *
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--ckpt', type=str, default='Diffusion/Trained_Models/DPM_chair_objects.pt')
+parser.add_argument('--ckpt', type=str, default='models/Diffusion/Trained_Models/DPM_chair_objects.pt')
 parser.add_argument('--categories', type=str, default='chair')
 parser.add_argument('--device', type=str, default='cuda')
 # Datasets and loaders
 parser.add_argument('--batch_size', type=int, default=1) #please update this to the number of pcs
 parser.add_argument('--num_workers', type=int, default=0)
-args = parser.parse_args()
+args = parser.parse_args("")
 
 def pc_normalize(pc):
     centroid = np.mean(pc, axis=0)

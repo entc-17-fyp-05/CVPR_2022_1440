@@ -3,9 +3,9 @@ import numpy as np
 import torch.nn.functional as F
 from torch import optim
 from torch import nn
-from models.flow import get_point_cnf
-from models.flow import get_latent_cnf
-from utils import truncated_normal, reduce_tensor, standard_normal_logprob
+from models.Pointflow.models.flow import get_point_cnf
+from models.Pointflow.models.flow import get_latent_cnf
+from models.Pointflow.utils import truncated_normal, reduce_tensor, standard_normal_logprob
 
 
 class Encoder(nn.Module):

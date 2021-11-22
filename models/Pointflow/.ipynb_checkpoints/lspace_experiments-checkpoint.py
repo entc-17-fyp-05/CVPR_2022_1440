@@ -6,7 +6,7 @@ import copy
 from pprint import pprint
 from collections import defaultdict
 
-from models.networks import PointFlow
+from models.Pointflow.models.networks import PointFlow
 from datasets import get_datasets, synsetid_to_cate
 
 import argparse
@@ -159,7 +159,7 @@ parser.add_argument('--num_sample_points', default=2048, type=int,
                     help='Number of points (per-shape) to be sampled (for demo.py).')
 
 cat= 'chair'
-args = parser.parse_args(args=['--cates', cat,'--resume_checkpoint', 'Pointflow/Trained_Models/checkpoint.pt', '--dims', '512-512-512','--latent_dims', '256-256', '--use_latent_flow', '--gpu', '0','--batch_size','10'])
+args = parser.parse_args(args=['--cates', cat,'--resume_checkpoint', 'models/Pointflow/Trained_Models/checkpoint.pt', '--dims', '512-512-512','--latent_dims', '256-256', '--use_latent_flow', '--gpu', '0','--batch_size','10'])
 
 model = PointFlow(args)
 
