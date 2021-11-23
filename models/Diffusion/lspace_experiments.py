@@ -13,7 +13,7 @@ from models.Diffusion.models.autoencoder import *
 parser = argparse.ArgumentParser()
 parser.add_argument('--ckpt', type=str, default='models/Diffusion/Trained_Models/DPM_chair_objects.pt')
 parser.add_argument('--categories', type=str, default='chair')
-parser.add_argument('--device', type=str, default='cuda')
+parser.add_argument('--device', type=str, default='cpu')
 # Datasets and loaders
 parser.add_argument('--batch_size', type=int, default=1) #please update this to the number of pcs
 parser.add_argument('--num_workers', type=int, default=0)
@@ -26,11 +26,11 @@ def pc_normalize(pc):
     pc = pc / m
     return pc
 
-ckpt = torch.load(args.ckpt)
+ckpt = torch.load(args.ckpt, map_location='cpu')
 seed_all(ckpt['args'].seed)#test_loader=test_loader
 model = AutoEncoder(ckpt['args']).to(args.device)
 model.load_state_dict(ckpt['state_dict'])
-model.to('cuda')
+model.to('cpu')
 model.eval()
 
 print("model_load_successful")
@@ -53,7 +53,7 @@ def encode(chair):
     return(code)
 
 def reconstruct_from_code(chair):
-    chair= torch.from_numpy(chair.astype(np.float32)).to('cuda')
+    chair= torch.from_numpy(chair.astype(np.float32)).to('cpu')
     #print(chair)
     recons = model.decode(chair,2048, flexibility=ckpt['args'].flexibility).detach().cpu().numpy()
     #recons = np.expand_dims(recons,0)
