@@ -42,7 +42,7 @@ Editing Seats - Narrow seats, Wide seats, Stuffed seats
     Download and place them at the path "Final_Repository/data"
 
 #### **Step 02** : Download the Trained Models
-    Pre-Trained models are available [here](https://drive.google.com/drive/folders/10Zt2EKBBPn743-5onwiRJ_USxlrApVft?usp=sharing)
+Pre-Trained models are available [here](https://drive.google.com/drive/folders/10Zt2EKBBPn743-5onwiRJ_USxlrApVft?usp=sharing)
 
     Download and place them at the path "Final_repository/models/*--model--*/Trained_models"
 
