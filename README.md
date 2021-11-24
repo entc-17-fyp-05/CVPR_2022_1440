@@ -11,10 +11,10 @@
 * * *
 GIF
 ![alt text](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/Original.png)
-![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif0.png)
-![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif1.png)
-![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif2.png)
-![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif3.png)
+![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif0.gif)
+![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif1.gif)
+![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif2.gif)
+![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif3.gif)
 
 * * *
 
