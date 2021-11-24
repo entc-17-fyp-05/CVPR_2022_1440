@@ -54,15 +54,39 @@ Editing Seats - Narrow seats, Wide seats, Stuffed seats
         
 * **Example-1** : If you want to edit pointclouds with the **Diffusion Probabilistic Model** for the **chair class** you will need the following: 
 
-        data : chair_parts.npy | chair_objects.npy
-
-        pre-trained models : AAE_chair_parts.pth | chair.pth | latent_con_model.pth | DPM_chair_objects.pt 
+        | Dataset           | Path to Include                         |
+        |-------------------|-----------------------------------------|
+        | chair_parts.npy   | Final_Repository/data/chair_parts.npy   |
+        | chair_objects.npy | Final_Repository/data/chair_objects.npy |
+       
+       
+        | Trained Model         | Path to Include                                                          |
+        |-----------------------|--------------------------------------------------------------------------|
+        | AAE_chair_parts/E.pth | Final_Repository/models/AAE/Trained_Models/AAE_chair_parts/E.pth         |
+        | AAE_chair_parts/G.pth | Final_Repository/models/AAE/Trained_Models/AAE_chair_parts/G.pth         |
+        | chair.pth             | Final_Repository/models/Part_Segment/Trained_Models/chair.pth            |
+        | latent_con_model.pth  | Final_Repository/models/Part_Segment/Trained_Models/latent_con_model.pth |
+        | DPM_chair_objects.pt  | Final_Repository/models/Diffusion/Trained_Models/DPM_chair_objects.pt    |
+        
         
 * **Example-2** : If you want to edit pointclouds with the **3DAAE Model** for the **airplane class** you will need the following: 
 
-        data : airplane_parts.npy | airplane_objects.npy
+        | Dataset              | Path to Include                            |
+        |----------------------|--------------------------------------------|
+        | airplane_parts.npy   | Final_Repository/data/airplane_parts.npy   |
+        | airplane_objects.npy | Final_Repository/data/airplane_objects.npy |
 
-        pre-trained models : AAE_airplane_parts.pth | airplane.pth | latent_con_model.pth | AAE_airplane_objects.pt 
+
+
+        | Trained Model              | Path to Find and Include                                                          |
+        |----------------------------|--------------------------------------------------------------------------|
+        | AAE_airplane_parts/E.pth   | Final_Repository/models/AAE/Trained_Models/AAE_chair_parts/E.pth         |
+        | AAE_airplane_parts/G.pth   | Final_Repository/models/AAE/Trained_Models/AAE_chair_parts/G.pth         |
+        | airplane.pth               | Final_Repository/models/Part_Segment/Trained_Models/chair.pth            |
+        | latent_con_model.pth       | Final_Repository/models/Part_Segment/Trained_Models/latent_con_model.pth |
+        | AAE_airplane_objects/E.pth | Final_Repository/models/AAE/Trained_Models/AAE_airplane_objects/E.pth    |
+        | AAE_airplane_objects/G.pth | Final_Repository/models/AAE/Trained_Models/AAE_airplane_objects/G.pth    |        
+
 
 * * *
 
