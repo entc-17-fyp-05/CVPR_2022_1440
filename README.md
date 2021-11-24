@@ -38,7 +38,7 @@ Editing Seats - Narrow seats, Wide seats, Stuffed seats
 ### Datasets and Pre-Trained Models
 
 #### **Step 01** : Download the datasets
-    Datasets are available at *|url|*
+Datasets are available [here](https://drive.google.com/drive/folders/1Xbv8XzWUkYb_-p34eAkwBYIAl2buL91n?usp=sharing)
     Download and place them at the path "Final_Repository/data"
 
 #### **Step 02** : Download the Trained Models
