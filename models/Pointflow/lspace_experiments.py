@@ -7,7 +7,7 @@ from pprint import pprint
 from collections import defaultdict
 
 from models.Pointflow.models.networks import PointFlow
-from datasets import get_datasets, synsetid_to_cate
+from models.Pointflow.datasets import get_datasets, synsetid_to_cate
 
 import argparse
 
