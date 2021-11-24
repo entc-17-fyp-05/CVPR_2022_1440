@@ -35,7 +35,7 @@ G.eval()
 print("model_load_succesful")
 
 def encode(chair):
-    chair=pc_normalize(chair)
+    # chair=pc_normalize(chair)
     av=np.reshape(chair, (config['z_size'],3,1)).T
     codes=torch.from_numpy(av).to('cuda')
     with torch.no_grad():
