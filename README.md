@@ -9,11 +9,19 @@
 3D generative models have been recently successful in generating realistic 3D objects in the form of point clouds. However, existing generative models fail to manipulate the semantics of one or many different parts without extensive semantic attribute labels of 3D object parts or reference target point clouds, significantly limiting practicality. Furthermore, there is a lack of understanding on how the semantics of these non-Euclidean and permutation-invariant representations of 3D shapes are encoded in their corresponding generative latent spaces, beyond the ability to perform simple latent vector arithmetic or interpolations. In this paper, we first propose a part-based unsupervised semantic attribute identification mechanism using latent representations of 3D shape reconstruction models. Then, we transfer that knowledge to latent spaces of pretrained 3D generative models to unravel that their latent spaces embed disentangled representations for the component parts of objects in the form of linear subspaces, despite the unavailability of part-level labels during the training. Finally, we utilize the identified subspaces to develop a part-aware controllable 3D object editing framework that can operate on any pretrained 3D generative model.  With multiple ablation studies and testing on state-of-the-art generative models, we show that the proposed method can implement part-level semantic editing on an input point cloud while preserving other features and the realistic nature of the object. 
 
 * * *
-GIF
+Original  chairs
 ![alt text](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/Original.png)
+
+Editing Legs - Straight legs, Swivel legs, Cantilever legs
 ![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif0.gif)
+
+Editing Armrests - Simple armrests, Connected armrests, Remove armrests
 ![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif1.gif)
+
+Editing Backrests - Curved backrests, Stuffed backrests, Reclined backrests
 ![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif2.gif)
+
+Editing Seats - Narrow seats, Wide seats, Stuffed seats
 ![me](https://github.com/entc-17-fyp-05/CVPR_2022_1440/blob/master/gifs/gif3.gif)
 
 * * *
